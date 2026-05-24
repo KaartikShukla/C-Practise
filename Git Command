@@ -1,0 +1,40 @@
+GIT
+
+Version control System is a tools that helps to track changes in code.
+Git is a version Control System. It is 
+  Popular, Free & Open Source, Fast & scalable
+Git helps to track the history and collaborate.
+
+GITHUB
+
+Github is a website that allows developers to store and manage thier code using git.
+Folders --> Repository
+Read.md --> md stands for markdown
+# Check git on system git --version
+
+Configuring GIT
+# git config --global user.name "My Name"
+# git config --global user.email "someone@email.com"
+# git config --list
+
+In Git, configuration settings can be stored at different levels.
+
+The two most commonly used are:
+
+Global configuration
+Local configuration
+
+*  Global Configuration  *
+
+Global configuration applies to all repositories of your system/user account.
+
+*  Local Configuration  *
+
+Local configuration applies to only one specific repository.
+
+Useful when:
+
+Different GitHub accounts are used
+Office and personal emails differ
+Team requires specific identity
+When you set username or email globally, every Git project will use it by default.
