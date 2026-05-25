@@ -1,0 +1,86 @@
+/*
+cd foldername:- change directory to new folder name
+mkdir:- make new directory
+cd ..:- back to previous folder
+*/
+GIT
+
+Version control System is a tools that helps to track changes in code.
+Git is a version Control System. It is 
+  Popular, Free & Open Source, Fast & scalable
+Git helps to track the history and collaborate.
+
+GITHUB
+
+Github is a website that allows developers to store and manage thier code using git.
+Folders --> Repository
+Read.md --> md stands for markdown
+# Check git on system git --version
+
+Configuring GIT
+In windows use gitBash/ In mac use terminal to run these commands.
+# git config --global user.name "My Name"
+# git config --global user.email "someone@email.com"
+# git config --list
+~ --> root directory
+
+In Git, configuration settings can be stored at different levels.
+
+The two most commonly used are:
+
+Global configuration
+Local configuration
+
+*  Global Configuration  *
+
+Global configuration applies to all repositories of your system/user account.
+When you set username or email globally, every Git project will use it by default.
+*  Local Configuration  *
+
+Local configuration applies to only one specific repository.
+
+Useful when:
+
+Different GitHub accounts are used
+Office and personal emails differ
+Team requires specific identity
+
+Clone & Status
+Clone - Cloning a repository on our local machine. Copying folder from github to local system
+# git clone <--some link--> // This link we will get from our repository in https
+
+Status - displays the state of the code
+# git status
+clear command to clear the terminal
+ls: - list files in git
+ls -a: - list all hidden files in git
+
+When a file is modified then we have to add and commit 
+Four status of files
+Untracked :- new files that git doesn't track yet.
+Modified :- Changed
+Staged :- file is ready to committed
+Unmodified :- unchanged
+
+Add:- Add new or changed files in your working directory to the git staging area.
+#  git add <--file name-->
+#  git add . // Add all files at once
+
+Commit:- It is the record of change
+#  git commit -m "some message"
+
+When we commit changes but the changes are not shown on the github then we use the Push command
+
+Push:- Upload local repo content to remote repo
+#  git push origin main
+
+When we want to create repo from local system to github
+
+init Command 
+init:- used to create a new git repo
+#  git init
+#  git remote add origin <-link-> // We can change the name from origin to another name  
+#  git remote -v (to verify remote)
+#  git branch (to check branch)
+#  git branch -M main  (to rename branch)
+#  git push origin main
