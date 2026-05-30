@@ -1,17 +1,6 @@
-/*  Constructor
-    Special method invoked automatically at the time of object creation. Used for Initialisation.
-
-    * Same name as class
-    * Constructor doesn't have a return type
-    * Only called once (automatically), at object creation
-    * Memory allocation happens when constructor is called
-
-    Constructor are of 3 types:
-    * Non Paramterized Constructor
-    * Parameterized Constructor
-    * Copy Constructor: In a single class if there are more than one constructor of same name but different parameter
-        * different parameter : Constructor Overloading --> Example of Polymorphism    
-    
+/* Copy Constructor
+    Special constructor (default) used to copy properties of one object into another.
+    It takes the properties of one object and creates the copy.
 */
 
 #include<iostream>
@@ -40,7 +29,14 @@ using namespace std;
     string dept;
     string subject;
     
-
+    //Copy Constructor
+    Teacher(Teacher &obj){      //&obj means pass by reference it means original obj is getting passed not its copy 
+        cout << "I am custom copy construtor.. \n";
+        this->name = obj.name;
+        this->dept = obj.dept;
+        this->subject = obj.subject;
+        this->salary = obj.salary;
+    }
     //methods / member functions
     void changeDept(string newDept){
         dept = newDept;
@@ -68,5 +64,6 @@ int main(){
     //t1.setSalary(25000);
     //cout << t1.getSalary() << endl;
     Teacher t2("Abc","CS","C++",25000);
-    t2.getinfo();
+    Teacher t3(t2);     //Default copy constructor --invoke 
+    t3.getinfo();
 }

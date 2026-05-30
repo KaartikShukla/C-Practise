@@ -1,19 +1,7 @@
-/*  Constructor
-    Special method invoked automatically at the time of object creation. Used for Initialisation.
-
-    * Same name as class
-    * Constructor doesn't have a return type
-    * Only called once (automatically), at object creation
-    * Memory allocation happens when constructor is called
-
-    Constructor are of 3 types:
-    * Non Paramterized Constructor
-    * Parameterized Constructor
-    * Copy Constructor: In a single class if there are more than one constructor of same name but different parameter
-        * different parameter : Constructor Overloading --> Example of Polymorphism    
-    
+/* this
+    this is a special pointer in C++ that points to the current object.
+    this->prop is same as *(this).prop
 */
-
 #include<iostream>
 #include<string>
 #include<bits/stdc++.h>
@@ -29,11 +17,11 @@ using namespace std;
       //  cout << "Hi, I am constructor" << endl;
     //}
     //2. Paramterized Constructor
-    Teacher(string n, string d, string s, double sal){
-        name = n;
-        dept = d;
-        subject = s;
-        salary = sal;
+    Teacher(string name, string dept, string subject, double salary){
+        this->name = name;
+        this->dept = dept;
+        this->subject = subject;
+        this->salary = salary;
     }
     // properties / attributes
     string name;

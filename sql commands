@@ -1,0 +1,83 @@
+SQL 
+SQL is a programming language used to interact with relational databases.
+
+It is used to perform CRUD operations.
+
+Create
+Read
+Update
+Delete
+
+Database have interelated data in the form of tables.
+
+columns -> structure / schema
+
+*   Creating our First database
+
+    #   CREATE DATABASE db_name
+
+    #   DROP DATABASE db_name
+
+// Uppercase and Lowercase both are applicable for writing command
+
+    #   Use Db_name // Whenever we have to use database
+
+*   Creating our first table
+
+    #   CREATE Table_name(
+        column_name1 datatype constraint,
+        column_name2 datatype constraint,
+        column_name3 datatype constraint
+    );
+
+*   SQL Datatype
+
+//  In CHAR the size is fixed and in VARCHAR the size is variable it means if we are saving PUNE in char(50) it will reserve all 50 places 
+//  whereas in VARCHAR(50) and saving PUNE it will reserve only 4 places.
+//  BIT(1) means 0,1 whereas BIT(2) means 00, 01, 10, 11
+//  In order to save Boolean values we use tinyint
+
+*   Signed & Unsigned
+
+//   TINYINT UNSIGNED( 0 to 255)
+//  TINYINT(-128 to 127)
+
+*   Types of SQL commands
+
+DDL(Data Definition Language):  Create, Alter, Rename, Truncate & Drop
+DQL(Data Query Language):   Select
+DML(Data Manipulation Language):    Insert, Update & Delete
+DCL(Data Control Language):     Grant & Revoke ermission to users
+TCL(Transaction Control Language):  Start transaction, commit & rollback
+
+*   Database Related Queries
+
+#   CREATE DATABASE db_name;
+#   CREATE DATABASE IF NOT EXISTS db_name;
+#   DROP DATABASE db_name;
+#   DROP DATABASE IF EXISTS db_name;
+#   SHOW DATABASES;
+#   SHOW TABLES;
+
+*   Table Related Queries
+
+Select & View All Columns
+#   SELECT * FROM table_name;
+
+Insert
+
+// For Multiple values prefer this syntax
+#   INSERT INTO table_name(column1,column2) VALUES (Col1_val1,col2,val1),(col1_val2,col2_val2);
+
+//  For Single value prefer this syntax
+#   INSERT INTO table_name VALUES (Col1_val1,col2,val1);
+
+*   Keys
+Primary Key
+It is a column (or a set of columns) in a table that uniquely identifies each row.(a unique id)
+There is only 1PK & it should be NOT NULL
+
+Foreign Key
+A foreign key is a column (or a set of columns) in a table that refers to the primary key of another table
+There can be multiple FK's
+FKs can have duplicate and NULL values. 
