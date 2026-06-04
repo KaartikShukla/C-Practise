@@ -25,14 +25,12 @@ int main(){
     printVec(v1);
 
     //Declaring and filling the value in vector 
-    vector<int> v2(10,3);
-    printVec(v2);   
+    vector<int> v3(10,3);
+    printVec(v3);   
     // Remove last element of vector
     vector<int> v2;
     v2.pop_back();  //O(1)
 
     //Copy vector
     vector<int> v2 = v; // If we change in v2 then v wont change --> O(n)
-    
-
 }
