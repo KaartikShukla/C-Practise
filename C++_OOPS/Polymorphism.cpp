@@ -15,6 +15,9 @@ Polymorphism is the ability of objects to take on different forms or behave in d
     
     
     Virtual Functions: A virtual function is a member function that you expect to be redefined in derived classes.
+                       Virtual functions are dynamic in nature
+                       Defined by the keyword "virtual" inside a base class and are always declared with a base class and overridden in child class
+                       A virtual function is called during run time.
 */
 
 /*  Function Overloading    */
@@ -87,11 +90,11 @@ class Child : public Parent{
     }
     void hello(){
         cout << "Hello from Child"<< endl;
-    }
+    } 
 };
 
 int main(){
     Child c1;
     c1.getInfo();
-    c1.hello();     // The function hello value has been overriden in child function due to virtual keyword
+    c1.hello();     // The function hello() value has been overriden in child function due to virtual keyword
 }
