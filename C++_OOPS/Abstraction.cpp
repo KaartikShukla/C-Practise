@@ -1,6 +1,6 @@
 /*  Abstraction 
     
-    Hiding all unnessary details & showing only the important parts
+    Hiding all unneccesary details & showing only the important parts
     The easy way to implement Abstraction is Access Modifier.
 
     The other way to implement Abstraction is Abstract classes.
