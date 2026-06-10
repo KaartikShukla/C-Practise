@@ -1,4 +1,5 @@
 SQL 
+
 SQL is a programming language used to interact with relational databases.
 
 It is used to perform CRUD operations.
@@ -67,10 +68,10 @@ Select & View All Columns
 Insert
 
 // For Multiple values prefer this syntax
-#   INSERT INTO table_name(column1,column2) VALUES (Col1_val1,col2,val1),(col1_val2,col2_val2);
+#   INSERT INTO table_name(column1,column2) VALUES (Col1_val1,col2_val1),(col1_val2,col2_val2);
 
 //  For Single value prefer this syntax
-#   INSERT INTO table_name VALUES (Col1_val1,col2,val1);
+#   INSERT INTO table_name VALUES (Col1_val1,Col2_val1);
 
 *   Keys
 
@@ -90,4 +91,111 @@ SQL Constraints are used to specify rules for data in a table
 NOT NULL:   Columns cannot have a null value
 UNIQUE:     All values in columan are different
 Primary Key:    Makes a column unique & not null but used only for one
+
+Foreign Key:    prevent actions that would destroy links between tables
+    
+#                CREATE TABLE temp(
+#                   cust_id int,
+#                   FOREIGN KEY(cust_id) references Customer (id)   // Customer is another table name in which there is id column
+#               );
+
+Default:    sets the default value of a column
+
+            Salary INT DEFAULT 25000
+
+Check:  it can limit the values allowed in a column
+
+#   CREATE TABLE City(
+    id INT PRIMARY KEY,
+    city VARCHAR(50),
+    age INT,
+    CONSTRAINT age_check CHECK(age >= 18 AND city = "Delhi"));
+
+#   CREATE TABLE newTab(
+    age INT CHECK (age >=18));
+
+*   Select: Used to select any data from database
+    
+#   SELECT col1,col2 from table_name;
+
+#   SELECT * from table_name;
+
+#   SELECT DISTINCT(column_name) from table_name;
+
+*   Where:  to define some conditions
+
+#   SELECT col1, col2 from table_name WHERE conditions;
+
+using operator in where clause
+
+Arithmetic Operators:   +,-,*,/,%
+Comparison Operators:   =,1=,>,>=,<,<=
+Logical Operators:      AND,OR,NOT,IN,BETWEEN,ALL,LIKE,ANY
+Bitwise Operators:      &,|
+
+Logical Operators:  
+
+BETWEEN:    Selects for a given range
+#   SELECT * from student Where marks BETWEEN 80 AND 90        // Value 80 and 90 are inclusive
+
+IN: Matches any value in the list
+#   SELECT * from student Where city IN ("Delhi","Mumbai")
+
+NOT:    To negate the given condition
+#   SELECT * from student Where city NOT IN ("Delhi","Mumbai")
+
+*   Limit:  Select an upper limit on number of tuples rows to be returned
+
+#   SELECT col1,col2 from table_name LIMIT number
+
+Order By clause:    To sort in ascending or descending order
+
+#   SELECT col1,col2 from table_name order by column_name ASC
+
+*   Aggregate Functions:    Aggregate functions perform a calculations on a set of values and return a single value
+    
+    Count()
+    MAX()
+    MIN()
+    SUM()
+    AVG()
+
+#   SELECT function_name(column_name) FROM table_name
+
+*   Group By Clause
+
+    Group rows that have the same values into summary rows.
+    It collects data from multiple records and group the result by one or more column
+    
+    // Generally we use group by with some aggregate function
+
+#   SELECT col1, count(col2) from table_name GROUP BY col1
+
+*   Having clause
+
+    Similar to Where ie applies some condition on rows.
+    Used when we want to apply any condition after grouping.
+
+#   SELECT count(col1), col2 from table_name Group By col2 Having max(col3) > 0
+
+*   General Order of Commands
+
+SELECT column,
+FROM table_name,
+WHERE conditions,
+GROUP BY columns,
+HAVING condition,
+ORDER BY column Asc;
+
+// WHERE puts condition on rows
+// Having puts condition on group
+
+/*  Table Related Queries   */
+
+*   UPDATE table_name SET col1 = val1, col2 = val2 WHERE condition
+
+
+
+
+
 
