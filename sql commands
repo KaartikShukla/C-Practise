@@ -285,12 +285,85 @@ ORDER BY column Asc;
 
 #   SELECT * from student as a RIGHT JOIN course as b ON a.id = b.id WHERE a.id IS NULL;
 
-*   Full Exclusive Join
-
-
-
 *   Self Join
 //  It is a regular join but the table is joined with itself.
 //  This query is executed right to left.
+
 #   SELECT columns FROM table as a JOIN table as b ON a.col_name = b.col_name;
 
+*   Union
+//  It is used to combine the result set of two or more SELECT statements.
+//  Gives UNIQUE records.
+//  To use it:
+//  every SELECT should have same no of columns.
+//  columns must have similar data types.
+//  columns in every SELECT should be in same order.
+
+#   SELECT columns FROM table A UNION SELECT columns from table B.
+
+*   UNION ALL
+//  It returns all the values as UNION removes the duplicate one. 
+
+#   SELECT columns FROM table A UNION ALL SELECT columns from table B.
+
+*   SQL Sub Queries
+//  A subquery or inner query or a nested query is a query within another SQL query.
+//  It involves 2 select statements.
+//  Subqueries can we written inside 1. Select 2. From 3. Where
+
+#   SELECT columns FROM table_name WHERE col_name operator (subquery);
+
+*   MySQL Views
+//  A view is a virtual table based on the result set of an sql statement.
+
+#   CREATE VIEW view1 AS SELECT rollno, name from student;
+#   SELECT * FROM view1;
+#   DROP VIEW view1;
+
+*   Stored Routine
+//  An SQL statement or a set of SQL statement that can be stored on database server which can be call no of times.
+//  Stored Routine are of two types
+//  *   Stored Procedure
+//  *   User Defined Functions
+
+*   Stored Procedure
+//  These are routines that contain a series of SQL statements and procedural logic.
+//  Often used for performing actions like data modification, transaction control, and executing sequences of statements.
+
+#   DROP PROCEDURE IF EXISTS p_name;
+
+//  Temp changing delimiter
+#   DELIMITER $$
+
+#   CREATE PROCEDURE p_name()
+#   BEGIN
+#       SELECT * FROM employees LIMIT 10;
+#   END$$
+
+//  Again changing delimiter
+#   DELIMITER;
+
+//  Stored Procedure with Parameter
+#   DELIMITER $$
+#   CREATE procedure get_empid(IN p_fname VARCHAR(50))
+#   BEGIN
+#       SELECT emp_id from employees where fname = p_fname;
+#   END$$
+#   DELIMITER ;
+
+//  Call to Stored Procedure
+#   call db_name.procedure_name();  // if not inside database
+#   call procedure_name();  // if inside database
+
+//  Return in Stored Procedure
+#   DELIMITER $$
+#   CREATE procedure get_sum(IN p_fname VARCHAR(50), OUT p_sum DECIMAL(10,2))
+#   BEGIN
+#    Select SUM(Salary) INTO p_sum from employees;
+#   END$$
+#   DELIMITER ;
+
+//  Call to Return in Stored Procedure
+#   SET @output_variable_name = 0;
+#   Call function_name(p_name,@output_variable_name);
+#   SELECT @output_varibale_name; 
