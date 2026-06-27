@@ -40,7 +40,7 @@ using namespace std;
 // }
 
 /* Friend Class  
-    Complex class is foraward declared as compiler will read calculator class first and will find Complex as argument
+    Complex class is forward declared as compiler will read calculator class first and will find Complex as argument
     In Calculator class addRealComplex() function is only declared and not defined inside class beacuse compiler will not be able to understand o1 and o2 in void addRealComplex(Complex o1, Complex o2)
     addRealComplex() function is written with scope resolution operator in Complex class as friend function
     void Calculator::addRealComplex(Complex o1, Complex o2) is declared outside the class with scope resolution 

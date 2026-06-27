@@ -1,6 +1,35 @@
-/*      Maximum Subarray Sum
-    If value of array is n then subarray is (n*(n+1)/2)
-
+/*      Kadane's Algorithm
+If value of array is n then subarray is (n*(n+1)/2)
+    
+    Main Idea (1 line)
+        At every index, decide whether to:
+        Continue the current subarray, or
+        Start a new subarray from the current element.
+        Whichever gives a larger sum is chosen.
+    When to Use?
+        Use Kadane's Algorithm when the question asks for:
+            Maximum Subarray Sum
+            Largest Contiguous Sum
+            Continuous Subarray with Maximum Sum
+    Time Complexity: O(n)
+    Space Complexity: O(1)
+    
+    Intuition
+        Suppose your current subarray sum is positive.
+        ➡ Keep adding the next element because it can increase the answer.
+        If the current sum becomes negative,
+        ➡ Throw it away and start from the current element because a negative sum will only reduce future sums.
+    Rule:
+        Negative sum is a burden, so discard it.
+    
+    Algorithm
+        Maintain two variables:
+            currentSum → Maximum sum ending at current index.
+            maxSum → Maximum sum found so far.
+        For every element:
+            currentSum = max(current element,
+                            currentSum + current element)
+            maxSum = max(maxSum, currentSum)
 */
 #include<iostream>
 #include<bits/stdc++.h>
