@@ -367,3 +367,10 @@ ORDER BY column Asc;
 #   SET @output_variable_name = 0;
 #   Call function_name(p_name,@output_variable_name);
 #   SELECT @output_varibale_name; 
+
+
+//  DATEDIFF(date1,date2)
+
+#   DATEDIFF(date1, date2)
+
+//  It returns date1-date2
