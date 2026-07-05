@@ -374,3 +374,51 @@ ORDER BY column Asc;
 #   DATEDIFF(date1, date2)
 
 //  It returns date1-date2
+
+//  IF and ElSE
+
+#   SELECT col1,col2 if(Condition,True Result, False Result) as Alias from table_name
+
+//  CASE
+
+#   SELECT col1,col2
+#   CASE
+#   When Condition1 Then Result1
+#   When Condition2 Then Result2
+#   When Condition3 Then Result3
+#   Else Result Alias_name
+#   End As Alias_name
+#   From Table_name;
+
+/*  Extra Knowledge  */
+
+//  Whenever you hear
+
+How many times
+Frequency
+Count
+Repeated
+Occurred
+
+immediately think of
+
+GROUP BY
+
+Memory Trick
+
+//  Whenever a question says:
+
+worked together
+purchased together
+ordered multiple times
+visited many times
+repeated
+frequency
+appeared at least N times
+
+Think of this pattern:
+
+#   SELECT columns
+#   FROM table
+#   GROUP BY columns
+#   HAVING COUNT(*) >= N;
