@@ -1,4 +1,8 @@
 /*
+What is a Preprocessor?
+
+A preprocessor is a program that processes the source code before it is compiled.
+
 #define Statement in C
 
 #define is a preprocessor directive used to define:
@@ -7,11 +11,6 @@ Symbolic constants
 Macros
 Macro-like substitutions with arguments
 
-It is processed before the actual compilation of the C program.
-
-. What is a Preprocessor?
-
-Before understanding #define, students should understand the basic C compilation process.
 
 3. Symbolic Constants
 
@@ -25,11 +24,13 @@ When we write:
 
 #define MAX 100
 
-we have not created a variable.
+* we have not created a variable.
 
-There is no memory allocated for MAX.
+* There is no memory allocated for MAX.
 
-It is simply a preprocessor substitution.
+* It is simply a preprocessor substitution.
+
+
 
 What is a Macro?
 
