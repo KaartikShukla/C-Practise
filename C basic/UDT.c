@@ -6,10 +6,10 @@ struct student{
     float total_marks;
     };
 
-// union data{
-//     int id;
-//     char grad;
-// };
+union data{
+    int id;
+    char grad;
+};
 
 // enum Day{
 //     Monday,
@@ -27,13 +27,13 @@ int main() {
     printf("%d",sizeof(struct student));
     //Union
     // printf("Union\n");
-    // union data d;
-    // d.id =3;
-    // printf("id = %d\n",d.id);
-    // d.grad ='A';
-    // printf("Grade = %c\n",d.grad);
-    // printf("%d\n",sizeof(struct student));
-    // printf("%d\n",sizeof(union data));
+    union data d;
+    d.id =3;
+    printf("id = %d\n",d.id);
+    d.grad ='A';
+    printf("Grade = %c\n",d.grad);
+    printf("%d\n",sizeof(struct student));
+    printf("%d\n",sizeof(union data));
     
     // //Enum
     

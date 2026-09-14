@@ -93,7 +93,7 @@ Can work with different types if expression permits	                           H
 #include <stdio.h>
 #define PI 3.14159
 #define Area_of_Circle(r) (PI * (r) * (r))
-#define DEBUG_MODE
+//#define DEBUG_MODE
 int main(){
 float radius = 5.0;
 float myArea;
