@@ -164,7 +164,7 @@ int main(){
     s1.dob.month = 8;
     s1.dob.year = 2000;
 
-return 0;
+ return 0;
 
 }
 
