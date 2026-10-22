@@ -8,7 +8,7 @@ struct Student
     int roll;
     float marks;
     char grade;
-};
+}; 
 
 struct Student s1;
 
@@ -39,7 +39,7 @@ int main()
     printf("Address of i = %p\n", (void *)&d.i);
     printf("Address of f = %p\n", (void *)&d.f);
     printf("Address of c = %p\n", (void *)&d.c);
-
+    printf("Size of union = %zu bytes\n", sizeof(d));
     return 0;
 }
 
@@ -66,6 +66,8 @@ int main()
     printf("Address of i = %p\n", (void *)&d.i);
     printf("Address of f = %p\n", (void *)&d.f);
     printf("Address of c = %p\n", (void *)&d.c);
+    printf("Size of struct = %zu bytes\n", sizeof(s));
+
 
     return 0;
 }
@@ -76,3 +78,19 @@ Address of i = 000000000061FE10
 Address of f = 000000000061FE14
 Address of c = 000000000061FE18
 */
+
+
+// Error: conflicting tag name
+#include <stdio.h>
+
+struct Data {
+    int x;
+};
+
+union Data {   // Error: conflicting tag name
+    float y;
+};
+
+int main() {
+    return 0;
+}

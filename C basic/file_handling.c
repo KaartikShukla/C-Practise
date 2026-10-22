@@ -18,7 +18,7 @@ When writing:
 Program → Stream → File
 
 
-. Types of Streams
+ Types of Streams
 
 In C, the standard streams are:
 
@@ -153,7 +153,7 @@ Example:
 
 fprintf(fp, "Age = %d", age);
 
-ifference Between printf() and fprintf()
+difference Between printf() and fprintf()
 Function	Purpose
 printf()	Writes formatted output to standard output
 fprintf()	Writes formatted output to a specified stream

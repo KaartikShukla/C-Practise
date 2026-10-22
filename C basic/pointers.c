@@ -32,7 +32,7 @@ A pointer can intentionally point to nothing.
 
 int *p = NULL;
 
-Dereferencing a null pointer causes undefined behavior.
+//Dereferencing a null pointer causes undefined behavior.
 
 int *p = NULL;
 
@@ -126,6 +126,7 @@ int main()
     p->marks = 90.0;
 
     printf("%.2f", s1.marks);
+    
 
     return 0;
 }
