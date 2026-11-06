@@ -1,4 +1,5 @@
-// AdvanceData Types
+// Advance Data Types
+// User defined data type
 #include <stdio.h>
 struct student{
     int id;
@@ -10,11 +11,11 @@ union data{
     char grad;
 };
 
-enum Day{
-    Monday,
-    Tuesday,
-    Wednesday
-};
+// enum Day{
+//     Monday,
+//     Tuesday,
+//     Wednesday
+// };
 int main() {
     //User Defined Data Types
     //Struct
@@ -23,9 +24,9 @@ int main() {
     a.total_marks =  187.5;
     printf("%d\n",a.id);
     printf("%.2f\n",a.total_marks);
-
+    printf("%d",sizeof(struct student));
     //Union
-    printf("Union\n");
+    // printf("Union\n");
     union data d;
     d.id =3;
     printf("id = %d\n",d.id);
@@ -34,11 +35,11 @@ int main() {
     printf("%d\n",sizeof(struct student));
     printf("%d\n",sizeof(union data));
     
-    //Enum
+    // //Enum
     
-    enum  Day today = Monday;
-    if(today == Monday){
-        printf("The Value assigned to monday is :%d",today);
-    }
+    // enum  Day today = Monday;
+    // if(today == Monday){
+    //     printf("The Value assigned to monday is :%d",today);
+    // }
     return 0;
 }

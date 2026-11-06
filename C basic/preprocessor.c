@@ -1,7 +1,99 @@
+/*
+What is a Preprocessor?
+
+A preprocessor is a program that processes the source code before it is compiled.
+
+#define Statement in C
+
+#define is a preprocessor directive used to define:
+
+Symbolic constants
+Macros
+Macro-like substitutions with arguments
+
+
+3. Symbolic Constants
+
+A symbolic constant is a name that represents a fixed value.
+
+#define Does NOT Create a Variable
+
+This is extremely important.
+
+When we write:
+
+#define MAX 100
+
+* we have not created a variable.
+
+* There is no memory allocated for MAX.
+
+* It is simply a preprocessor substitution.
+
+
+
+What is a Macro?
+
+A macro is another use of #define.
+
+A macro can represent a piece of code rather than just a simple value.
+
+Example:
+
+#define SQUARE(x) x * x
+
+Now:
+
+int result = SQUARE(5);
+
+is expanded conceptually to:
+
+int result = 5 * 5;
+
+So:
+
+#define
+   ↓
+Macro definition
+   ↓
+Preprocessor substitution
+
+Function-Like Macro
+
+A macro that accepts arguments is called a function-like macro.
+
+Syntax:
+
+#define MACRO_NAME(parameter) replacement
+
+Example:
+
+#define SQUARE(x) ((x) * (x))
+
+Usage:
+
+printf("%d", SQUARE(5));
+
+Expansion:
+
+printf("%d", ((5) * (5)));
+
+Output:
+
+25
+
+Macro	                                                                     Function
+Preprocessor handles it	                                                       Compiler handles it
+Text substitution	                                                           Function call
+No type checking of arguments	                                               Type checking applies
+Can cause multiple evaluation	                                               Argument evaluated normally before call
+No normal function-call overhead	                                           May involve function-call overhead, though compiler can optimize
+Can work with different types if expression permits	                           Has declared parameter types
+*/
 #include <stdio.h>
 #define PI 3.14159
 #define Area_of_Circle(r) (PI * (r) * (r))
-#define DEBUG_MODE
+//#define DEBUG_MODE
 int main(){
 float radius = 5.0;
 float myArea;
