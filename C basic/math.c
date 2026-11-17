@@ -1,4 +1,13 @@
 /*
+
+What is ctypes?
+
+ctypes is a Python standard-library module that allows Python programs to call functions in shared libraries such as:
+
+.dll    → Windows
+.so     → Linux/Unix
+.dylib  → macOS
+
 Python Interaction with C
 
 Python

@@ -1,4 +1,4 @@
-/* Global Memory vs Local Memory, Scope and Lifetime of Variables in C */
+ /* Global Memory vs Local Memory, Scope and Lifetime of Variables in C */
 
 /*
 Scope = Where can I access the variable?
@@ -64,7 +64,9 @@ void fun()
 {
     printf("%d", x);
 }
+
 /*
+
 A global variable has file scope by default, 
 unless static gives it internal linkage, and external access across source files requires appropriate declarations/linkage.
 */
@@ -137,14 +139,12 @@ void fun()
 }
 
 /* 
-Four Common Storage Classes 
-| Storage class   | Typical scope                  | Lifetime                                         |
-| --------------- | ------------------------------ | ------------------------------------------------ |
-| `auto`          | Block                          | Block execution                                  |
-| `register`      | Block                          | Block execution                                  |
-| `static` local  | Block                          | Entire program                                   |
-| `static` global | File                           | Entire program                                   |
-| `exte
+Storage class	        Typical scope	                    Lifetime
+auto	                    Block	                        Block execution
+register	                Block	                        Block execution
+static local	            Block	                        Entire program
+static global	    File (internal linkage)	                Entire program
+extern	        Global or file scope (declaration)	        Entire program, for the associated object
 
 register is a request to the implementation to consider using a CPU register; modern compilers may ignore that request.
 */
@@ -169,6 +169,3 @@ meaning the name is limited to that translation unit (source file after preproce
 Global static → accessible only within that source file, while its lifetime is the entire program.
 */
 static int x = 100;
-
-
-

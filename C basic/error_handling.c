@@ -1,5 +1,7 @@
 /*
-When a C program performs operations such as opening a file, allocating memory, reading data, or communicating with the operating system, something can go wrong.
+When a C program performs operations such as opening a file, 
+allocating memory, reading data, or communicating with the operating system,
+something can go wrong.
 
 For example:
 
@@ -22,7 +24,8 @@ strerror() → converts error number into error message
 /*
 What is errno?
 
-errno is a special integer value used to indicate an error that occurred during certain library/system operations.
+errno is a special integer value used to indicate an error that occurred during certain 
+library/system operations.
 */
 
 #include <stdio.h>
@@ -74,14 +77,13 @@ Do not check errno by itself to determine whether the immediately preceding func
 
 Instead, first check the function's documented failure indication.
 */
-
-FILE *fp = fopen("data.txt", "r");
-
-if (errno == 0)
-{
-    printf("File opened successfully");
+int main(){
+    FILE *fp = fopen("data.txt", "r");
+    if(errno == 0)
+    {
+        printf("File opened successfully");
+    }
 }
-
 // Previous operation → failed → errno = 2
 
 // Next operation → succeeds

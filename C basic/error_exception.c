@@ -75,7 +75,8 @@ Division by zero
 
 Exception
 
-An exception is a mechanism in some programming languages/systems for representing and transferring control when an exceptional condition occurs.
+An exception is a mechanism in some programming languages/systems for representing and transferring control
+ when an exceptional condition occurs.
 
 Languages such as:
 
@@ -105,11 +106,5 @@ depending on the situation.
 
 C does not have try-catch
 
-What is ctypes?
 
-ctypes is a Python standard-library module that allows Python programs to call functions in shared libraries such as:
-
-.dll    → Windows
-.so     → Linux/Unix
-.dylib  → macOS
 */
