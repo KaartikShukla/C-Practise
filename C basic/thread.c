@@ -506,8 +506,8 @@ This notifies all threads waiting on that condition variable.
 
 Important: A notification does not guarantee that the condition is true when the waiting thread resumes. Therefore, always check the condition again.
 */
-/*
 
+/*
 #include <stdio.h>
 #include <pthread.h>
 
